@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encriptador de proyecto alura</title>
-    <link rel="shortcut icon" href="img/circul1.gif" type="image/xtech"/>
+    <link rel="shortcut icon" href="img/circul1.gif" type="image/xtech" />
     <link rel="stylesheet" href="style.css" />
 
     <!-- para modificar los mensaje pop up -->
@@ -46,7 +46,7 @@
             swal("!Atención¡", "Debes ingresar un texto alfa-númerico", "warning");
         }
 
-    } 
+    }
 
     // funcoin inversa criptar 
     function desencriptar() {
@@ -70,7 +70,7 @@
             tmensaje.textContent = "Ningún mensaje fue encontrado";
             parrafo.textContent = "Ingresa mensaje que deseas encriptar o desencriptar.";
             swal("!Atención¡", "Debes ingresar un texto alfa-númerico", "warning");
-        } 
+        }
 
 
     } //  fin de funcion desencriptar
@@ -110,11 +110,29 @@
             </div>
 
             <div class="botones">
-                <button class="btn-encriptar" type="button" onclick="encriptar()">
+                <a class="btn-neon" type="button" onclick="encriptar()">
+                    <span id="span1"></span>
+                    <span id="span2"></span>
+                    <span id="span3"></span>
+                    <span id="span4"></span>
                     Encriptar
-                </button>
-                <button type="button" class="btn-desencriptar" value="Desencriptar"
-                    onclick="desencriptar()">Desencriptar</button>
+                </a>
+                <a type="button" class="btn-neon" value="Desencriptar"
+                    onclick="desencriptar()">
+                    <span id="span1"></span>
+                    <span id="span2"></span>
+                    <span id="span3"></span>
+                    <span id="span4"></span>
+                    Desencriptar
+                </a>
+                <a
+                    href="https://d335luupugsy2.cloudfront.net/cms%2Ffiles%2F10224%2F1671210503Prancheta_3.png?utm_campaign=alura_latam_-_challenge_email_projeto_1_esp&utm_medium=email&utm_source=RD+Station" target="_blank" class="btn-neon">
+                    <span id="span1"></span>
+                    <span id="span2"></span>
+                    <span id="span3"></span>
+                    <span id="span4"></span>
+                    Insignia Alura                 
+                </a>                
             </div>
             <div class="botones-chicos">
                 <button type="button" class="btn-copiar" value="Copiar" onclick="copiar()">Copiar</button>

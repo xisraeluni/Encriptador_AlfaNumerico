@@ -2,7 +2,9 @@
 Encriptado de textos alfa-numérico 
 Links de la pagina:
 https://encriptado-alfanumerico.netlify.app/
-![alfanumerico](https://github.com/xisraeluni/Encriptador_AlfaNumerico/assets/115751683/2226bc78-e1d9-4f2e-af48-7440996c987d)
+
+
+![aluraEncriptador](https://github.com/xisraeluni/Encriptador_AlfaNumerico./assets/115751683/53c62644-45a7-4dae-aaaa-e395271a60f5)
 
 
 Links de insignia Alura:

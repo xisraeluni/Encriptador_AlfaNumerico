@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador de proyecto alura</title>
+    <link rel="shortcut icon" href="img/circul1.gif" type="image/xtech"/>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- para modificar los mensaje pop up -->
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+
+<!-- proyecto de js -->
+
+<script>
+    // funcion el java script para criptar el texto
+    function encriptar() {
+        // obtengo lo que esta en el container de texto y lo asigno  la variable 
+        // texto local de esta funcion
+        var texto = document.getElementById("texto").value;
+        // variable local solo para guardar el contenido numerico del caracter
+        var resultado = "";
+        // for para analizar cada caracter en la posicion del vector texto local
+        for (var i = 0; i < texto.length; i++) {
+            var codigo = texto.charCodeAt(i);
+            // resultado igual al valor numerico del caracter + 1 en cada posicion del vector
+            resultado += String.fromCharCode(codigo + 1);
+        }
+        // retorno el el caracter ya codificado al cuadro de id="texto"
+        // document.getElementById("resultado").value = resultado; viejo
+        document.getElementById("texto").value = resultado;
+        // modifico el contenedor de encriptado para cambiar mensaje y imagen
+        if (texto.length != 0) {
+            tmensaje.textContent = "Encriptado exitoso";
+            parrafo.textContent = "!Ahora lo puedes usar en el chat de manera secreta¡";
+            buscador.src = "./img/xisraeltech.gif"
+        } else {
+            buscador.src = "./img/buscador.png";
+            tmensaje.textContent = "Ningún mensaje fue encontrado";
+            parrafo.textContent = "Ingresa el mensaje que deseas encriptar o desencriptar.";
+            swal("!Atención¡", "Debes ingresar un texto alfa-númerico", "warning");
+        }
+
+    } 
+
+    // funcoin inversa criptar 
+    function desencriptar() {
+        var texto = document.getElementById("texto").value;
+        var resultado = "";
+
+        for (var i = 0; i < texto.length; i++) {
+            var codigo = texto.charCodeAt(i);
+            resultado += String.fromCharCode(codigo - 1);
+        }
+
+        document.getElementById("texto").value = resultado;
+
+        // modifico el contenedor de encriptado para cambiar mensaje y imagen
+        if (texto.length != 0) {
+            tmensaje.textContent = "Desencriptado éxitoso";
+            parrafo.textContent = "!Felicidades por el mensaje¡";
+            buscador.src = "./img/rayas.gif"
+        } else {
+            buscador.src = "./img/buscador.png";
+            tmensaje.textContent = "Ningún mensaje fue encontrado";
+            parrafo.textContent = "Ingresa mensaje que deseas encriptar o desencriptar.";
+            swal("!Atención¡", "Debes ingresar un texto alfa-númerico", "warning");
+        } 
+
+
+    } //  fin de funcion desencriptar
+
+    function copiar() {
+        var resultado = document.getElementById("resultado");
+        resultado.select();
+        document.execCommand("copy");
+        alert("¡El resultado se ha copiado al portapapeles!");
+    }
+
+    function pegar() {
+        navigator.clipboard.readText().then(function (textoPegado) {
+            document.getElementById("texto").value = textoPegado;
+        });
+    }
+
+    function borrar() {
+        document.getElementById("texto").value = "";
+        // document.getElementById("resultado").value = "";
+    }
+    // modificacion del container de encriptado, cambio de imagen y mensaje al usaurio
+</script>
+
+
+<body>
+
+    <div class="container">
+
+        <div class="encriptar">
+            <h1 class="white-with-blue-shadow">Encriptador de Texto Alfa-Númerico</h1>
+            <textarea name="texto" class="texto" id="texto" cols="30" rows="10"
+                placeholder="Ingresa el texto aquí"></textarea>
+
+            <div class="terminos">
+                <p>Ingrese cualquier texto alfa-númerico.</p>
+            </div>
+
+            <div class="botones">
+                <button class="btn-encriptar" type="button" onclick="encriptar()">
+                    Encriptar
+                </button>
+                <button type="button" class="btn-desencriptar" value="Desencriptar"
+                    onclick="desencriptar()">Desencriptar</button>
+            </div>
+            <div class="botones-chicos">
+                <button type="button" class="btn-copiar" value="Copiar" onclick="copiar()">Copiar</button>
+                <button type="button" class="btn-borrar" value="Borrar" onclick="borrar()">Borrar</button>
+            </div>
+
+        </div>
+
+        <!-- container del encriptado, muestra las imagenes y algunos mensajes -->
+        <div class="encriptado">
+            <img src="img/buscador.png" alt="" id="buscador" />
+            <!-- muestra el mensaje debajo de la imagen del container encriptado -->
+            <div class="mensaje-encriptado" id="mensaje-encriptado">
+                <h2 id="tmensaje">Ningún mensaje fue encontrado</h2>
+                <p id="parrafo">
+                    Ingresa el mensaje que deseas encriptar o desencriptar.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

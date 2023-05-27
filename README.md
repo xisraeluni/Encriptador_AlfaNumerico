@@ -4,7 +4,7 @@ Links de la pagina:
 https://xisraeluni.github.io/Encriptador_AlfaNumerico./
 ====================================================================================
 https://encriptado-alfanumerico.netlify.app/
-
+=====================================================================================
 
 ![aluraEncriptador](https://github.com/xisraeluni/Encriptador_AlfaNumerico./assets/115751683/53c62644-45a7-4dae-aaaa-e395271a60f5)
 

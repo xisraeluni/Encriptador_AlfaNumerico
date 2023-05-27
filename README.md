@@ -2,6 +2,7 @@
 Encriptado de textos alfa-numérico 
 Links de la pagina:
 https://xisraeluni.github.io/Encriptador_AlfaNumerico./
+====================================================================================
 https://encriptado-alfanumerico.netlify.app/
 
 
